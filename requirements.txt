@@ -1,0 +1,6 @@
+fastapi[all]==0.103.1
+pymysql==1.0.3
+SQLAlchemy==2.0.20
+mysqlclient==2.1.1
+python-dotenv==1.0.1
+python-jose[cryptography]==3.3.0
