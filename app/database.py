@@ -34,9 +34,9 @@ def get_db():
 #     try:
 #         conn = pymysql.connect(
 #         host="localhost",
-#         user="root",
-#         password="root",
-#         database="socialmedia"
+#         user="asd",
+#         password="asd",
+#         database="asd"
 #     )
         
 #         cursor = conn.cursor()
