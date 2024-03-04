@@ -1,5 +1,6 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
+from pydantic.types import conint
 
 class PostBase(BaseModel):
     title: str
@@ -36,6 +37,12 @@ class PostResponse(BaseModel):
         from_attributes = True
 
 
+# Schema for the response of the post with votes
+class PostVoteResponse(BaseModel):
+    Post: PostResponse
+    votes: int
+
+
 # Schema for the request of the user credentials
 class UserCreate(BaseModel):
     email: EmailStr
@@ -59,4 +66,11 @@ class Token(BaseModel):
 # Schema for the token data
 class TokenData(BaseModel):
     id: Optional[str] = None
+
+
+# Schema for the request of the vote
+# dir = 1 for upvote, dir = 0 for downvote
+class Vote(BaseModel):
+    post_id: int
+    dir: int
 
