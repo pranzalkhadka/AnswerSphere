@@ -29,22 +29,3 @@ def get_db():
         db.close()
 
 
-# while True:
-
-#     try:
-#         conn = pymysql.connect(
-#         host="localhost",
-#         user="root",
-#         password="root",
-#         database="socialmedia"
-#     )
-        
-#         cursor = conn.cursor()
-#         print("Connected to database")
-#         break
-
-#     except Exception as error:
-
-#         print("Error while connecting to database", error)
-#         # If an error comes, keep trying every two seconds
-#         time.sleep(2)
